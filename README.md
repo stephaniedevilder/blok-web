@@ -40,7 +40,7 @@ https://www.legue.co/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="images/frontpage.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/frontpage.png" width="375px" alt="hoi">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
