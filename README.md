@@ -16,13 +16,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
-
+Stephanie de Vilder
 
 #### Je startniveau:
-hier je startniveau (kies uit zwart, rood óf blauw)
+blauw/rood
 
 #### Je focus:
-hier je focus (kies uit responsive óf surface plane)
+surface plane
  
 </details>
 
@@ -36,11 +36,11 @@ hier je focus (kies uit responsive óf surface plane)
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+file:///Users/Stephanie/OneDrive%20-%20HvA/CMD%20jaar%201/CMD%20jaar%202/frontend/basiswebsite/index.html
 
 #### Screenshot(s) van de eerste pagina (small screen): 
 hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+<img src="images/frontpage.png" width="375px" alt="dummy-plaatjeomschrijving van de pagina">
 
 #### Screenshot(s) van de tweede pagina (small screen):
 hier de naam van de pagina  
