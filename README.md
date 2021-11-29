@@ -39,11 +39,11 @@ surface plane
 file:///Users/Stephanie/OneDrive%20-%20HvA/CMD%20jaar%201/CMD%20jaar%202/frontend/basiswebsite/index.html
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
+home page 
 <img src="images/frontpage.png" width="375px" alt="dit is de frontpage van mijn website die ik wil namaken">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
+second page 
 <img src="images/secondpage.png" width="375px" alt="dit is een sub pagina van mijn website die ik ga namaken">
  
 </details>
