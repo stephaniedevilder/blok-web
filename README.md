@@ -44,7 +44,7 @@ home page
 
 #### Screenshot(s) van de tweede pagina (small screen):
 second page 
-<img src="images/secondpage.png" width="375px" alt="dit is een sub pagina van mijn website die ik ga namaken">
+<img src="images/second-page.png" width="375px" alt="dit is een sub pagina van mijn website die ik ga namaken">
  
 </details>
 
