@@ -115,7 +115,7 @@ samen met je groepje opstellen
 
 | student 1      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| Ik wil dat mijn content langzaam verscijnt wanneer je naar beneden scrolt. | en dit             | en ik dit    | en dan ik dat    |
+| Ik wil dat mijn content langzaam verschijnt wanneer je naar beneden scrolt. | en dit             | en ik dit    | en dan ik dat    |
 |  | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
