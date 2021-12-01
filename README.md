@@ -76,26 +76,23 @@ second page
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Tijdens de eerste 2 weken moest ik best wel inkomen weer. Ik was veel stof vergeten uit jaar 1 en hierdoor kwam ik moeizaam opgang.
+<img src="images/week3-stand.png" width="375px" alt="breakdown van nog een dynamisch deel">
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| student 1 (ik)     | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| element wil niet in het midden | en dit             | en ik dit    | en dan ik dat    |
+|  | dit als er tijd is | nog een punt | dit wil ik zeker |
+|             | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik heb hulp gekregen met het centreren van een een element wat steeds niet lukte en verder was ik wel lekker bezig en had ik niet veel vragen omdat ik deze in de lessen al had opgelost.
 
 </details>
 
@@ -109,7 +106,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb mijn eerste pagina zo goed als af. Ik moet nog een paar kleine puntjes op de i zetten en een hamburger menu maken. Ik ben nu bezig gegaan met de tweede pagina maar wil misschien toch eerst de eerste pagina helemaal afmaken.
+<img
 
 
 ### Agenda voor meeting
