@@ -93,6 +93,7 @@ samen met je groepje opstellen
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
 - Ik heb hulp gekregen met het centreren van een een element wat steeds niet lukte en verder was ik wel lekker bezig en had ik niet veel vragen omdat ik deze in de lessen al had opgelost.
+- Volgende week beter gidhub bijhouden.
 
 </details>
 
@@ -123,10 +124,10 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Moeilijke functie die ik wou toevoegen laten vallen want is niet prioriteit en te lastig voor me.
+- Code opschonen voordat ik aan de tweede pagina ga beginnen.
+- Opdrachten van volgende week goed maken want handig voor leuke interacties.
+
 
 </details>
 
