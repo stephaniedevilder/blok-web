@@ -179,6 +179,8 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ To do:
+ alle pixels omzetten in em.
 
 
 ### Agenda voor meeting
