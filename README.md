@@ -179,17 +179,26 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ 
+ Ik liep even vast met de states omdat mijn hover state niet werkte doordat het op mobiel formaat is. Het leek toen even dat mijn andere states ook niet werkte maar dit is gelukkig uiteindelijk gelukt.
+ Ik was erg blij met het hamburger menu die bijna helemaal goed werkt. Ik heb hier wel hulp bij gekregen want in mijn eentje lukte dit niet en was ik daar ook een tijdje mee aan het struggelen.
+ Verder heb ik deze week vooral de puntjes op de i gezet voor mijn eerste pagina.
+ 
  To do:
- alle pixels omzetten in em.
+ - Alle pixels omzetten in em.
+ - 2e pagina maken.
+ - surface plane plan maken: welke extra'tjes moet ik nog toevoegen.
+ - formulier states nog toevoegen
+ 
 
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| student 1 (ik)      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+| Waarom worden sommige buttons niet in focus state weergegeven wanneer ik met de tab toets werk?   | en dit             | en ik dit    | en dan ik dat    |
+| ik wil dat wanneer je het hamburger menu openslaat je niet meer naar beneden kan scrollen verder op de pagina. dit is nog niet gelukt. | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
 
