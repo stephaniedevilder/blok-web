@@ -219,9 +219,9 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1 (ik)      | student 2          | student 3    | student 4        |
+| student 1 (ik)      | Sven         | Isabel    | Max      |
 | ---            | ---                | ---          | ---              |
-|  | en dit             | en ik dit    | en dan ik dat    |
+|  | en dit             | Geen vragen  | Geen vragen   | Geen vragen
 | ik wil dat wanneer je het hamburger menu openslaat je niet meer naar beneden kan scrollen verder op de pagina. dit is nog niet gelukt. | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
