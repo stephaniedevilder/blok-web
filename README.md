@@ -142,29 +142,53 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
+ 
+ SCREENREADER:
+ - Screenreader leest de navigatie links die buiten het zicht staan voor, hier kan je helaas niet op klikken.
+ - Read more buttons veranderen.
+ - Alt tekst bij images invullen.
+ 
+ Bril 1: Peripheral Field Loss:
+ -	Email adress input veld lastig te lezen door contrast.
+ 
+ Bril 2: Low contrast:
+ -	Email address input lastig te lezen.
+ -	We respect your privacy ook low contrast lasting te lezen.
+ 
+ Bril 3: Blur/glare:
+-	Formulier email input niet te lezen.
+-	Privacy tekst niet te lezen.
+-	Hamburger menu streepjes beter als het wit is.
+ 
+ De rest van de testen gingen allemaal zonder probleem. Dit komt doordat mijn buttons groot genoeg zijn en de contrasten goed zijn.
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Screenreader leest linkjes die niet te zien zijn.
+Screenreader leest de navigatie links die buiten het zicht staan voor, hier kan je helaas niet op klikken.
+ <img>
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplossing: Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### contrast te laag (input veld) 
+Email adress input veld lastig te lezen door contrast. 
+ <img>
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplosing: De grijze tekst iets donkerder makenzodat het contrast groter is. (met indien nodig een afbeelding)
+
+
+#### privacy tekst lastig te lezen 
+tekst "We respect your privacy..." ook low contrast dus lastig te lezen.  (met indien nodig een afbeelding)
+
+Oplossing: Of ik moet de tekst wit maken zodat het minder in de achtegrond valt,
+ of ik voeg een opasity toe aan de achtergrond image.    (met indien nodig een afbeelding)
+
+
+#### Hamburger menu valt weg 
+Hamburger menu streepjes zijn nu zwart en doordat alle andere content op dit stukje pagina wit is valt het een beetje weg als je zicht niet helemaal goed is. (met indien nodig een afbeelding)
+
+Oplossing: Maak het hambuger menu wit zodat het beter opvalt. (met indien nodig een afbeelding)
 
 </details>
 
@@ -197,7 +221,7 @@ samen met je groepje opstellen
 
 | student 1 (ik)      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| Waarom worden sommige buttons niet in focus state weergegeven wanneer ik met de tab toets werk?   | en dit             | en ik dit    | en dan ik dat    |
+|  | en dit             | en ik dit    | en dan ik dat    |
 | ik wil dat wanneer je het hamburger menu openslaat je niet meer naar beneden kan scrollen verder op de pagina. dit is nog niet gelukt. | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
