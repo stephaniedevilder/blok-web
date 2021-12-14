@@ -2,12 +2,14 @@
 
 
 <!doctype html>
-<html lang="nl">
+<html lang="nl" class="loading">
 	
 <head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
 	<link rel="stylesheet" href="https://use.typekit.net/dap6oan.css">
 	
@@ -15,24 +17,41 @@
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Howdy FED2122</title>
+	<title>Legue homepage</title>
 	
 	<link href="styles/style.css" rel="stylesheet">
-	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+	<link rel="icon" type="image/svg+xml" href="images/legue-logo.png">
 </head>
 
 
 <body>
 	<header>
-		<img src="images/legue-logo.png"> 
+		<a href="index.html"> 
+			<img src="images/legue-logo.png"> 
+		</a>
+			
+			<nav>
+				<button>
+					<span></span>
+					<span></span>
+				</button>
+
+				<aside>
+					<ul>
+						<li><a href="secondpage.html">Interviews</a></li>
+						<li><a href="secondpage.html">Legue branding</a></li>
+						<li><a href="secondpage.html">About</a></li>
+					</ul>
+				</aside>
+			</nav>
+		
 	</header>
 	<main>
 		<section>
 			<img src="images/circle-background-frontpage.jpg">
 			<h1>A mission of love</h1>
 			<h2>Legue is founded by Josephine Bredsted. Through creative direction and spirit boosters, we want to expand your perspective on selflove.</h2>
-			<a href="">Read more</a>
-			
+			<a href="secondpage.html">About</a>
 		</section>
 	
 		<Section>
@@ -46,80 +65,92 @@
 			<div class="vl2"></div>
 		</Section>
 
+	
 		<section>
-			<Img src="images/girl-darkfoto.jpg">
-			<Img src="images/girl-pinkdress.jpg">
-			<Img src="images/girl-closeup.jpg">
-			<Img src="images/girl-beach.JPG">
-			<p>names</p>
-			<div class="vl2"></div>
-		</section>
-
-		<section>
-			<iframe id="player"  allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/rStPPV5RchQ?autohide=1&amp;autoplay=0&amp;controls=0&amp;enablejsapi=1&amp;iv_load_policy=3&amp;loop=0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;wmode=opaque&amp;origin=https%3A%2F%2Fwww.legue.co&amp;widgetid=1" ></iframe>
-			<!-- <video autoplay muted src="https://www.youtube.com/embed/rStPPV5RchQ?autohide=1&amp;autoplay=0&amp;controls=0&amp;enablejsapi=1&amp;iv_load_policy=3&amp;loop=0&amp;modestbranding=1&amp;playsinline=1&amp;rel=0&amp;showinfo=0&amp;wmode=opaque&amp;origin=https%3A%2F%2Fwww.legue.co&amp;widgetid=1"></video> -->
+			<video  autoplay muted controls>
+				<source src="legue-branding video.mov" type="video/mp4">
+			  </video>
 			<h2>Legue branding</h2>
-			<p>Transitions can be uncomfortable, 
-				but they're also a transformative time of co-creating a new way of being. 
-				Lean in.</p>
+			<a href="secondpage.html">Branding</a>
 		</section>
 
 		<section>
-			<div>vertical line</div>
+			<div class="vl"></div>
 			<h2>follow our journey</h2>
-			<div>vertical line</div>
-			<img src="" alt="">
-			<img src="" alt="">
-			<img src="" alt="">
+			<div class="vl2"></div>
+			
+			<div>
+				<a href="https://www.instagram.com/legueofficial/">
+					<img src="images/geit.jpeg" alt="girl with goat" >
+				</a>
+
+				<a href="https://www.instagram.com/legueofficial/">
+					<img src="images/park-cards.jpeg" alt="cards in park" >
+				</a>
+
+				<a href="https://www.instagram.com/legueofficial/">
+					<img src="images/boodschappen.jpeg" alt="groceries" >
+				</a>	
+			</div>
+			
 		</section>
 	</main>
 
 	<footer>
-		<form action=""></form>
+		
+		<img src="images/form-img.jpg" alt="field">
+		<h2>Good vibes in your inbox?</h2>
+		<p>Sign up with your email address to receive news and updates.</p>
+		<form>
+			<input type="text" name="email" placeholder="Email address">
+			<button type="submit" name="submit">Sign up</button>
+		</form>
 		<p>We respect your privacy</p>
 
+		
 		<h3>Company</h3>
 		<ul>
-			<a href="">About Legue</a>
+			<a href="secondpage.html">About Legue</a>
 		</ul>
 		<ul>
-			<a href="">Policies</a>
+			<a href="secondpage.html">Policies</a>
 		</ul>
 		<ul>
-			<a href="">Blog</a>
+			<a href="secondpage.html">Blog</a>
 		</ul>
 
 		<h3>Explore</h3>
 		<ul>
-			<a href="">Le'shop</a>
+			<a href="secondpage.html">Le'shop</a>
 		</ul>
 		<ul>
-			<a href="">Q & A</a>
+			<a href="secondpage.html">Q & A</a>
 		</ul>
 		<ul>
-			<a href="">Food</a>
+			<a href="secondpage.html">Food</a>
 		</ul>
 		<ul>
-			<a href="">Spirits & Health</a>
+			<a href="secondpage.html">Spirits & Health</a>
 		</ul>
 		<ul>
-			<a href="">Wellness & Travel</a>
+			<a href="secondpage.html">Wellness & Travel</a>
 		</ul>
 		<ul>
-			<a href="">Legue branding</a>
+			<a href="secondpage.html">Legue branding</a>
 		</ul>
 
 		<h3>Follow</h3>
-		<a href="">social media icons</a>
-
-		<p>Viborggrade 6, St 2100 copenhagen Denmark</p>
+		
+		<i class="fab fa-twitter"></i>
+		<i class="fab fa-instagram"></i>
+		<i class="fab fa-pinterest"></i>
+		
+		<img src="images/legue-logozwart.png" alt="Legue logo">
+		<p>Viborggrade 6, St 2100 copenhagen Denmark -</p>
 		<a href="">Contact@legue.co</a>
-
 
 	</footer>
 	
-	
-
 	<script src="scripts/script.js"></script>
 </body>
 	

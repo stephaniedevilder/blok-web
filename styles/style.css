@@ -2,75 +2,509 @@
 *, *::after, *::before {
   box-sizing:border-box;
   margin: 0;
-  padding: 0;  
-  overflow-x: hidden;
+  padding: 0;   
+}
+
+/* vooral gebruikt voor light en dark mode */
+:root {
+  --main-text-color: #000;
+  --main-background-color: #fff;
+  --img-text-color: #fff;
+  --button-white: #fff;
+  --button-black: #000;
+  --background-color-nav: rgb(254, 215, 208); 
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-text-color: #fff;
+    --main-background-color: rgb(28, 16, 16);
+    --img-text-color: #000;
+    --button-white: #000;
+    --button-black: #fff;
+    --background-color-nav: rgb(28, 16, 16);
+  }
+}
+
+/* zodat de basis achtergrond kleur wit of donker is */
+main{
+  background-color: var(--main-background-color);
 }
 
 img{
   display: block;
 }
 
-header > img{
+/**** LOGO ****/
+header > a > img{
   width: 7em;
   position: absolute;
   z-index: 9;
   left: 1.3em;
   top: 1.4em;
-
+  transition: 0.2s;
 }
 
-section:first-of-type > img{
-  position: relative;
-  max-width:200%;
-  height: 97vh;
-  margin-left: -90px;
+/**** LOGO STATES ****/
+header > a > img:hover{
+  width: 8em;
+  left: 1.1em;
+  top: 1.2em;
 }
 
-section:first-of-type > h1{
+header > a > img:active{  
+  width: 6em;
+  left: 1.6em;
+  top: 1.6em;
+}
+
+header > a > img:focus{
+  border: 1em solid white;
+}
+
+
+/*********
+HAMBURGER MENU
+BRON: FLEUR 
+*********/
+nav > button{
+  width: 10em;
+  height: 1.05em;
   position: absolute;
-  color: white;
+  top: 2.4em;
+  right: 2.2em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 6;
+}
+
+/* hamburger strepen */
+nav > button > span{
+  background: white;
+  width: 2em;
+  height: 0.17em;
+  position: absolute;
+  right: 0;
+}
+
+/* streep boven */
+nav > button > span:nth-of-type(1){
+  top: 100%;
+  transition: .5s;
+}
+
+/* streep onder */
+nav > button > span:nth-of-type(2){
+  top: 0%;
+  transition: .5s;
+}
+
+/* achtergrond wanneer je het menu opent */
+nav > aside{
+  background-color: var(--background-color-nav);
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-100%); /* zodat hij 100% uit beeld is eerst */
+  transition: .5s;
+  transition-delay: 0.1s;
+  z-index: 7;
+  animation-name: dropdown_terug; /* zodat hij ook geanimeerd terug gaat */
+  animation-duration: 1s;
+  width: 100%;
+}
+
+/*** ANIMATION ***/
+@keyframes dropdown_heen {
+  0% {
+    transform: translateX(-100%);
+  }
+  80% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes dropdown_terug {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* gekoppeld met JavaScript */
+nav.transitie_navigatie > aside{ /* als class in java : transitie_navigatie wordt aangeroepen moet dit op aside aangeroepen worden*/
+  animation-name: dropdown_heen;
+  animation-duration: 1s;
+}
+
+/* parent van linkjes in nav */
+nav > aside > ul{
+  margin-top: 10em;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+html.loading nav > aside{   /* zodat het menu niet meteen in beeld komt wanneer je de pagina laadt*/ 
+  animation: none;
+}
+
+
+/* linkjes in nav */
+nav > aside > ul > li{
+  line-height: 4em; 
+  text-align: center;
+  list-style: none;
+}
+ 
+/* individuele linkjes in nav */
+nav > aside > ul > li > a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 1.085em;
+  text-transform: uppercase;
+  white-space: nowrap; /* zodat het tweede woord niet naar onder springt */
+  transition: 0.3s;
+}
+
+/* navigatie interviews states */
+nav > aside > ul > li:nth-of-type(1) > a:hover{
+  font-size: 1.3em;
+}
+nav > aside > ul > li:nth-of-type(1) > a:active{
+  font-size: 0.6em;
+}
+nav > aside > ul > li:nth-of-type(1) > a:focus{
+  border: 0.1em solid black;
+  padding: 0.2em;
+}
+
+/* navigatie legue branding states */
+nav > aside > ul > li:nth-of-type(2) > a:hover{
+  font-size: 1.3em;
+}
+
+nav > aside > ul > li:nth-of-type(2) > a:active{
+  font-size: 0.6em;
+}
+
+nav > aside > ul > li:nth-of-type(2) > a:focus{
+  border: 0.1em solid black;
+  padding: 0.2em;
+}
+
+/* navigatie about states */
+nav > aside > ul > li:nth-of-type(3) > a:hover{
+  font-size: 1.3em;
+}
+
+nav > aside > ul > li:nth-of-type(3) > a:active{
+  font-size: 0.6em;
+}
+
+nav > aside > ul > li:nth-of-type(3) > a:focus{
+  border: 0.1em solid black;
+  padding: 0.2em;
+}
+
+/* zodat de nav in beeld blijft staan */
+nav.transitie_navigatie > aside{
+	transform: translateX(0%); 
+  z-index: 5;
+}
+
+/* Wanneer er op de hamburger streepjes geklikt wordt veranderen ze in een kruisje */
+nav.transitie_navigatie > button > span:nth-of-type(1){
+  transform: translateY(-0.5em) translateX(0) rotate(45deg);
+}
+
+nav.transitie_navigatie > button > span:nth-of-type(2){
+  transform: translateY(0.5em) translateX(0) rotate(-45deg);
+}
+
+
+/*****
+******
+FOOTER 
+******
+*****/
+
+footer {
+  position: relative;
+  margin-bottom: 1em;
+  overflow-x: hidden;
+  background-color: var(--main-background-color);
+}
+
+footer > img{
+  position: relative;
+  max-width: 200%;
+  height: 90vh;
+}
+
+/*** GOOD VIBES IN YOUR INBOX ***/
+footer > h2 {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 4.5em;
   font-family: 'Bodoni Moda', serif;
   font-weight: 400;
-  font-size: 50px;
   text-align: center;
-  top: 40%;
-  line-height: 60px;
+  width: 100%;
 }
 
+/*** p: SIGN UP WITH YOUR EMAIL TO RECEIVE NEWS AND UPDATES ****/
+footer :nth-child(3){
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 13em;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  text-align: center;
+  width: 75%;
+}
+
+/*** formulier ***/
+form {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 17em;
+  text-align: center;
+  
+}
+
+/*** email adress invullen ***/
+form > input {
+  margin-bottom: 1.8em;
+  padding: 1.3em 2em 1.3em 2em;
+  border: 0.1em solid #ddd;
+  font-family: brandon-grotesque, sans-serif;
+}
+
+
+/**** tekst in formulier (email address) ****/
+::placeholder {
+  color: rgb(194, 194, 194);
+  opacity: 1;
+  font-size: 1em;
+}
+
+/**** sign up button ****/
+form > button {
+  padding: 1em 1.3em 1em 1.3em;
+  background-color: black;
+  color: white;
+  border: 0.1em;
+  font-family: brandon-grotesque, sans-serif;
+  cursor: pointer;
+}
+
+
+/*** p: WE RESPECT YOUR PRIVACY ***/
+footer :nth-child(5){
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top: 32em;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 500;
+  font-size: 0.91em;
+  text-align: center;
+  width: 75%;
+}
+
+/*** COMPANY, EXPLORE, FOLLOW ***/
+footer > h3 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.05em;
+  margin-left: 1.2em;
+  font-weight: 400;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  color: var(--main-text-color);
+}
+
+footer > ul {
+  margin-left: 1.35em;
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 0.95em;
+}
+
+footer > ul > a {
+  color: var(--main-text-color);
+}
+
+/*** SOCIAL MEDIA ICONS ***/
+footer > i {
+  margin-left: 1.3em;
+  color: var(--main-text-color);
+}
+
+/*** LEGUE LOGO ***/
+footer > img:nth-last-of-type(1) {
+  position: relative;
+  width: 15em;
+  height: 10em;
+  margin-left: 1.2em;
+}
+
+/*** ADRESS ***/
+footer > p:nth-last-of-type(1) {
+  margin-left: 1.2em;
+  margin-top: 2em;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  max-width: 18.1em;
+  color: var(--main-text-color);
+}
+
+/*** CONTACT@LEGUE.co ***/
+footer > a:nth-last-of-type(1) {
+  margin-left: 1.2em;
+  color: var(--main-text-color);
+}
+
+
+/********* 
+**********
+FOOTER END 
+**********
+*********/
+
+/*** 
+MAIN 
+***/
+
+section:first-of-type{
+  overflow-x: hidden;
+}
+
+/*** BACKGROUND IMG ***/
+section:first-of-type > img{
+  position: relative;
+  width: 200%;
+  height: 97vh;
+  margin-left: -5.5em;
+}
+
+/*** A MISSION OF LOVE ***/
+section:first-of-type > h1{
+  position: absolute;
+  color: var(--img-text-color);
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 3.1em;
+  text-align: center;
+  top: 40%;
+  line-height: 1.15em;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+  animation: first-tekst 3s;
+}
+
+/*** LEGUE IS FOUNDED BY.... ***/
 section:first-of-type > h2{
   position: absolute;
-  color: white;
-  top: 0;
+  color: var(--img-text-color);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   font-family: 'Bodoni Moda', serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 20px;
+  font-size: 1.2em;
   text-align: center;
-  top: 65%;
+  top: 61%;
+  animation: second-tekst 3s;
 }
 
+/** ANIMATIE */
+@keyframes first-tekst {
+  0%{
+    color: #FFA7B9;
+    top: 45%;
+  }
 
+  40%{
+    letter-spacing: 0.05em;
+    top: 45%;
+  }
+  85%{
+    letter-spacing: 0.02em;
+    top: 45%;
+  }
+}
 
+@keyframes second-tekst {
+  0%{
+    color: #FFA7B9;
+    top: 63%;
+    font-size: 1.16em;
+  }
+
+  40%{
+    font-size: 1.16em;
+    top: 63%;
+  }
+  85%{
+    font-size: 1.16em;
+    top: 63%;
+  }
+}
+
+/*** BUTTON: ABOUT ***/
 section:first-of-type > a{
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: black;
-  background-color: white;
-  padding: 13px;
+  letter-spacing: 0.13em;
+  color: var(--main-text-color);
+  background-color: var(--button-white);
+  padding: 0.8em;
   position: absolute;
   top: 36em;
   left: 50%;
   transform: translateX(-50%);
-
-
+  transition: 0.2s;
 }
 
-section:nth-of-type(2) > h2{
+/*** ABOUT : STATES ***/
+section:first-of-type > a:hover{
+  background-color: coral;
   color: white;
+  padding: 0.9em;
+}
+
+section:first-of-type > a:focus{
+  color: var(--main-text-color);
+  border: 0.15em solid rgb(138, 44, 10);
+}
+
+section:first-of-type > a:active{
+  background: rgb(252, 186, 162);
+  color: white;
+  font-size: 0.88em;
+  top: 41em;
+}
+
+/*** #LEGUESHOP ***/
+section:nth-of-type(2) > h2{
+  color: var(--img-text-color);
   background-color: rgb(222, 106, 64);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -82,8 +516,9 @@ section:nth-of-type(2) > h2{
   font-weight: 400;
 }
 
+/*** STAY TUNED ***/
 section:nth-of-type(2) > h3{
-  color: white;
+  color: var(--img-text-color);
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
@@ -93,6 +528,7 @@ section:nth-of-type(2) > h3{
   font-size: 17px;
 }
 
+/*** INTERVIEUWS ***/ 
 section:nth-of-type(3) > h2{
   color: black;
   background-color: #EEDDFF;
@@ -106,49 +542,516 @@ section:nth-of-type(3) > h2{
   font-weight: 400;
 }
 
+/*** STREEP BOVEN ***/
 .vl {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-text-color);
   margin-top: 25px;
   height: 150px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  
 }
 
+/*** STREEP ONDER ***/
 .vl2 {
-  border-left: 1px solid black;
+  border-left: 1px solid var(--main-text-color);
   margin-top: -175px;
   height: 150px;
   left: 50%;
   transform: translateX(-50%);
   position: absolute;
-  
 }
 
-section:nth-of-type(5) > iframe {
-  
-  position: relative; 
-  padding-left: 50px;
-  padding-right: 59px;
-  width: 100%; 
-  height: 100%;
-}
-
+/*** zodat stukje onder video zelfde kleur heeft ***/
 section:nth-of-type(4) {
-  /* position: relative; */
+  background: rgb(240, 238, 235);
+}
+
+/*** video ***/ 
+section:nth-of-type(4) > video {
+  width: 100%;
+  height: 210px;
+}
+
+/*** LEGUE BRANDING tekst op video ***/
+section:nth-of-type(4) > h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  text-align: center;
+  top: 67em;
+  line-height: 25px;
+  color: var(--img-text-color);
+  overflow: hidden;
+
+}
+
+/*** BUTTON: Branding ***/
+section:nth-of-type(4) > a {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--main-text-color);
+  background-color: var(--img-text-color);
+  padding: 13px;
+  position: absolute;
+  rotate: 270deg;
+  right: -40px;
+  top: 119.8em;
+  transition: 0.2s;
+}
+
+/*** BRANDING : STATES ***/
+section:nth-of-type(4) > a:hover{
+  background-color: coral;
+  color: white;
+  padding: 17px;
+  top: 119.5em;
+}
+
+section:nth-of-type(4) > a:focus{
+  color: var(--main-text-color);
+  border: 1.5px solid rgb(138, 44, 10);
+}
+
+section:nth-of-type(4) > a:active{
+  background: rgb(252, 186, 162);
+  color: white;
+  font-size: 12px;
+  top: 139.5em;
+}
+
+/*** FOLLOW OUR JOURNEY ***/
+section:nth-of-type(5) > h2 {
+  color: black;
+  background-color: rgb(240, 238, 235);
+  padding-top: 200px;
+  padding-bottom: 210px;
   display: flex;
-  top: 3000px;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 400;
 }
 
-section:nth-of-type(4) >img {
-   position: relative; 
-  /* height: 97vh;
-  margin-left: -350px; */
-  /* overflow-x: scroll; */
-  width:400%;
-  height:100%;
+/*** 3 foto grid ***/
+section:nth-of-type(5) > div:nth-of-type(3) {
+  display: grid ;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3em;
+  padding: 1em;
+  background: rgb(240, 238, 235);
+}
+
+/*** zodat de foto's mooi in beeld staan  (foto geit) ***/
+section:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(1) > img {
+  width: 100%;
+}
+
+/*** " " (foto kaarten) ***/
+section:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(2) > img {
+  width: 100%;
+}
+
+/*** " " (foto boodschappen) ***/
+section:nth-of-type(5) > div:nth-of-type(3) > a:nth-of-type(3) > img {
+  width: 100%;
+}
+
+
+/**********
+***********
+Second page
+***********
+**********/
+
+/***
+****
+MAIN
+****
+***/
+
+/*** zodat je niet naar rechts kan scrollen op img ***/
+.second-page section:first-of-type{
+  overflow-x: hidden;
+}
+
+/*** background img ***/
+.second-page section:first-of-type > img{
+  position: relative;
+  width: 115%;
+  height: 80vh;
+  left: 4.2em;
+}
+
+/*** h1: LEGUE ***/
+.second-page section:first-of-type > h1{
+  position: absolute;
+  color: white;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  top: 13em;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: none;
+}
+
+/*** h2: BRANDING ***/
+.second-page section:first-of-type > h2{
+  position: absolute;
+  color: white;
+  font-family: 'Bodoni Moda', serif;
+  font-style: normal;
+  font-size: 3.5em;
+  text-transform: uppercase;
+  left: 0.1em;
+  top: 5em;
+  animation: none;
+}
+
+/*** p: holistic branding sees.... ***/
+.second-page section:nth-of-type(2) > p{
+  background-color: var(--main-background-color);
+  padding-top: 10em;
+  padding-bottom: 10em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  color: var(--main-text-color);
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  text-align: center;
+  display: flex;
+}
+
+/*** foto's en tekst in 4 grid ***/
+.second-page section:nth-of-type(3) {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8em;
+  padding: 0.8em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: var(--main-background-color);
+}
+  
+/*** grid images ***/
+.second-page section:nth-of-type(3) > img{
+  width: 100%;
+}
+
+/*** grid tekst ***/
+.second-page section:nth-of-type(3) > p{
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+  color: var(--main-text-color);
+}
+
+/*** eerste p in grid ***/
+.second-page section:nth-of-type(3) > p:nth-of-type(1) {
+  padding-top: 1.9em;
+  font-size: 1.1em;
+}
+
+/*** tweede p in grid ***/
+.second-page section:nth-of-type(3) > p:nth-of-type(2) {
+  font-size: 1.08em;
+  line-height: 2.5em;
+  padding-top: 2.45em;
+}
+
+/*** p: holistic marketing drives... ***/
+.second-page section:nth-of-type(4) > p{
+  background-color: var(--main-background-color);
+  padding-top: 10em;
+  padding-bottom: 10em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  color: var(--main-text-color);
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  text-align: center;
+  display: flex;
+}
+
+/*** jewelry IMG ***/ 
+.second-page section:nth-of-type(5) > img{
+  width: 100%;
+  padding: 1em;
+  background-color: rgb(240, 238, 235);
+  padding-bottom: 20em;
+} 
+
+/*** tekst op IMG ***/
+.second-page section:nth-of-type(5) > h3{
+  position: absolute;
+  top: 90em;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 2em;
+  color: black;
+  text-transform: uppercase;
+  background-color: rgb(240, 238, 235);
+  padding: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.4em;
+}
+
+/*** p onder jewelry IMG ***/
+.second-page section:nth-of-type(5) > p{
+  position: absolute;
+  top: 175em;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.1em;
+  text-align: center;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1.5em;
+  overflow: hidden;
+}
+
+/*** achtergrond kleur bij jewelry stukje ***/
+section:nth-of-type(5) {
+  background: rgb(240, 238, 235);
+}
+
+
+/*** video ***/ 
+section:nth-of-type(5) > video {
+  width: 100%;
+  height: 210px;
+  margin-top: -5.6em;
+  margin-bottom: 1em;
+  
+}
+
+/*** h3: ADIDAS RUNNING ***/
+section:nth-of-type(6) > h3:nth-of-type(1){
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  top: 116em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--main-text-color);
+}
+
+/*** p: campaign by adidas..... ***/
+section:nth-of-type(6) > p{
+  background-color: var(--main-background-color);
+  padding-top: 16.5em;
+  padding-bottom: 13em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  color: var(--main-text-color);
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 1em;
+  text-align: center;
+  display: flex;
+}
+
+/*** Adidas img ***/
+section:nth-of-type(6) > img{
+  width: 100%;
+}
+
+/*** h3: READY TO DISCOVER.... ***/
+section:nth-of-type(6) > h3:nth-of-type(2){
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  margin-top: 2em;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+/*** button: CONTACT US ***/
+section:nth-of-type(6) > a{
+  background-color: var(--button-black);
+  padding: 0.7em 1.2em 0.7em 1.2em;
+  color: var(--img-text-color);
+  font-size: 1em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-decoration: none;
+  font-family: brandon-grotesque, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  margin-top: 1.5em;
+  transition: 0.15s ease-in-out;
+}
+
+/*** CONTACT US states ***/
+section:nth-of-type(6) > a:hover{
+  background-color: #d29e5e;
+  font-size: 1.1em;
+  margin-top: 1.3em;
+}
+section:nth-of-type(6) > a:focus{
+  background-color: #d29e5e;
+  border: solid 0.15em black;
 }
 
 
 
+/*** streep ***/
+section:nth-of-type(7) > div{
+  margin-top: -12em;
+  background-color: var(--main-background-color);
+}
+
+/*** h2: READ OUR INTERVIEWS ***/
+section:nth-of-type(7) > h2{
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  position: relative;
+  text-align: center;
+  margin-top: 13em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  background-color: var(--main-background-color);
+  color: var(--main-text-color);
+}
+
+/*** parent van interview blokjes ****/
+section:nth-of-type(7) > ul{
+  height: 25em;
+  list-style-type: none;
+  text-align: center;
+  margin: 1.8em;
+  padding-bottom: 3em;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 2em;
+  background-color: var(--main-background-color);
+}
+
+/*** images interviews ***/
+section:nth-of-type(7) > ul > li > img{
+  width: 20em;
+  height: 18em;
+  margin-bottom: 2em;
+}
+
+/*** buttons interviews ***/
+section:nth-of-type(7) > ul > li > a{
+  color: var(--img-text-color);
+  font-size: 0.9em;
+  background-color: var(--button-black);
+  padding: 1em;
+  font-family: brandon-grotesque, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.2s ease-in-out;
+}
+
+/*** interview buttons : states (1) ***/
+section:nth-of-type(7) > ul > li:nth-of-type(1) > a:hover{
+  background-color: #B4ABC2;
+  font-size: 1em;
+}
+section:nth-of-type(7) > ul > li:nth-of-type(1) > a:focus{
+  border: solid 0.15em black;
+  background-color: #B4ABC2;
+}
+section:nth-of-type(7) > ul > li:nth-of-type(1) > a:active{
+  background-color: #B4ABC2;
+  font-size: 0.8em;
+}
+
+/*** (2) ***/
+section:nth-of-type(7) > ul > li:nth-of-type(2) > a:hover{
+  background-color: #EEBECC;
+  font-size: 1em;
+}
+section:nth-of-type(7) > ul > li:nth-of-type(2) > a:focus{
+  border: solid 0.15em black;
+  background-color: #EEBECC;
+}
+section:nth-of-type(7) > ul > li:nth-of-type(2) > a:active{
+  background-color: #EEBECC;
+  font-size: 0.8em;
+}
+
+/*** (3) ***/
+section:nth-of-type(7) > ul > li:nth-of-type(3) > a:hover{
+  background-color: #B4ABC2;
+  font-size: 1em;
+}
+section:nth-of-type(7) > ul > li:nth-of-type(3) > a:focus{
+  border: solid 0.15em black;
+  background-color: #B4ABC2;
+}
+section:nth-of-type(7) > ul > li:nth-of-type(3) > a:active{
+  background-color: #B4ABC2;
+  font-size: 0.8em;
+}
+
+
+/* bovenste stukje footer */
+/*** FOLLOW OUR JOURNEY ***/
+section:nth-of-type(8) > h2 {
+  color: black;
+  background-color: rgb(240, 238, 235);
+  padding-top: 200px;
+  padding-bottom: 210px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Bodoni Moda', serif;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+/*** 3 foto grid ***/
+section:nth-of-type(8) > div:nth-of-type(3) {
+  display: grid ;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3em;
+  padding: 1em;
+  background: rgb(240, 238, 235);
+}
+
+/*** zodat de foto's mooi in beeld staan  (foto geit) ***/
+section:nth-of-type(8) > div:nth-of-type(3) > a:nth-of-type(1) > img {
+  width: 100%;
+}
+
+/*** " " (foto kaarten) ***/
+section:nth-of-type(8) > div:nth-of-type(3) > a:nth-of-type(2) > img {
+  width: 100%;
+}
+
+/*** " " (foto boodschappen) ***/
+section:nth-of-type(8) > div:nth-of-type(3) > a:nth-of-type(3) > img {
+  width: 100%;
+}
