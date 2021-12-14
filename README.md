@@ -245,7 +245,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
  Ik had aan het begin vaak problemen met elementen centreren. Uiteindelijk ben ik erachter gekomen dat er verschillende manieren zijn om dit te doen en ging dit vanzelf.
  Ook vond ik het hamburger menu lastig aan het begin. Ik had meerdere video's bekeken maar iedereen deed het weer anders en daardoor wist ik niet goed waar ik moest beginnen. Uiteindelijk heeft fleur het met haar code uitgelegd en kon ik dit toepassen op mijn eigen werk en ben ik erg blij hoe het uiteindelijk is geworden. Het enige waar ik geen tijd meer voor had was aan de student assistente te vragen hoe ik de uitgeklapte hamburger menu vast kon zetten zodat je niet meer naar beneden kon scrollen. Ik heb dit in het laatste voortgangs gesprekje wel gevraagd maar ik ging het pas erna testen en toen lukte het niet. Door tijdsgebrek heb ik ervoor gekozen om eerst de rest van mijn website af te maken voordat ik het weer ging vragen.
  Uiteindelijk heb ik tijdens dit vak heel veel geleerd. Ik heb vooral de basis van html en css echt goed geleerd, simpele termen die ik vorig jaar niet begreep kan ik nu uit mezelf bedenken en toepassen. 
@@ -253,7 +253,8 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 
 ### Screenshot(s)
 
-hier screenshot(s) van je eindresultaat
+<img src="images/final-first-page.png" width="375px" alt="eerste pagina final">
+ <img src="images/final-second-page.png" width="375px" alt="tweede pagina final">
 
 </details>
 
