@@ -168,7 +168,7 @@ Lijst met je bevindingen die in de test naar voren kwamen:
 Screenreader leest de navigatie links die buiten het zicht staan voor, hier kan je helaas niet op klikken.
  <img>
 
-Oplossing: Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Oplossing: Ik weet niet of dit echt een probleem is eigenlijk, Het is misschien verwarrend voor mensen die de screenreader gebruiken maar ik denk dat ze er wel uit komen. Anders misschien iets doen met if else of hidden?
 
 
 #### contrast te laag (input veld) 
@@ -229,10 +229,9 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- hamburger menu vastzetten met max-height en overflowY: hidden
+- verder gaat het goed
+
 
 </details>
 
@@ -247,6 +246,10 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+ Ik had aan het begin vaak problemen met elementen centreren. Uiteindelijk ben ik erachter gekomen dat er verschillende manieren zijn om dit te doen en ging dit vanzelf.
+ Ook vond ik het hamburger menu lastig aan het begin. Ik had meerdere video's bekeken maar iedereen deed het weer anders en daardoor wist ik niet goed waar ik moest beginnen. Uiteindelijk heeft fleur het met haar code uitgelegd en kon ik dit toepassen op mijn eigen werk en ben ik erg blij hoe het uiteindelijk is geworden. Het enige waar ik geen tijd meer voor had was aan de student assistente te vragen hoe ik de uitgeklapte hamburger menu vast kon zetten zodat je niet meer naar beneden kon scrollen. Ik heb dit in het laatste voortgangs gesprekje wel gevraagd maar ik ging het pas erna testen en toen lukte het niet. Door tijdsgebrek heb ik ervoor gekozen om eerst de rest van mijn website af te maken voordat ik het weer ging vragen.
+ Uiteindelijk heb ik tijdens dit vak heel veel geleerd. Ik heb vooral de basis van html en css echt goed geleerd, simpele termen die ik vorig jaar niet begreep kan ik nu uit mezelf bedenken en toepassen. 
+ 
 
 ### Screenshot(s)
 
@@ -265,8 +268,8 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. Hamburger menu : hulp van fleur klasgenoot
+2. "Simple Text Animation Just By Using HTML & CSS" youtube "darkCode"
+
 
 </details>
