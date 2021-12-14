@@ -267,7 +267,6 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <details open>
 <summary>continu bijhouden terwijl je werkt</summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 1. Hamburger menu : hulp van fleur klasgenoot
 2. "Simple Text Animation Just By Using HTML & CSS" youtube "darkCode"
